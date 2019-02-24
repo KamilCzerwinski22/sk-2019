@@ -23,6 +23,7 @@ Konfiguracja połączenia sieciowego
 
 ipconfig /all
 ipconfig /displaydns
+nslookup
 
 Schemat sieci
 -------------
