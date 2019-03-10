@@ -20,21 +20,25 @@ Wejściowe parametry sieci
 | MASKA  | | |
 
 Weryfikacja połączenia
+```
 ping
+```
 Polecenie
+```
 ping 10.0.2.4
 ping 10.0.2.15
 
-
+```
 Efekt
+```
 64 bytes from 10.0.2.15: icmp_seq=1 ttl=64 time=0.313 ms
 64 bytes from 10.0.2.15: icmp_seq=2 ttl=64 time=0.377 ms
 64 bytes from 10.0.2.15: icmp_seq=3 ttl=64 time=0.364 ms
-
+```
 64 bytes from 10.0.2.15: icmp_seq=1 ttl=64 time=0.284 ms
 64 bytes from 10.0.2.15: icmp_seq=2 ttl=64 time=0.376ms
 64 bytes from 10.0.2.15: icmp_seq=3 ttl=64 time=0.403 ms
-
+```
 ```
 
 Statyczna konfiguracja parametrów połączenia
