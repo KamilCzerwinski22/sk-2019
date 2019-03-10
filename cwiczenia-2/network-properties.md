@@ -91,10 +91,11 @@ Efekt
 Warto wiedzieć
 --------------
 
+
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-| Lokalizacja pliku z konfiguracją sieci| | |
+| Lokalizacja pliku z konfiguracją sieci| cat /etc/resolv.conf| |
 | UP -> Wyłączenie interfejsu sieciowego| ifup| |
 | DOWN -> Włączenie interfejsu sieciowego| ifdown| |
 | Sprawdzenie obecnych parametrów | nmcli| |
@@ -102,13 +103,22 @@ Warto wiedzieć
 | Które interfejsy jakie porty słuchają | | |
 ```
 notki:
+global host, polaczyc oba
 ip a
 nmcli
 ifup enp0s3
-apt-get install git
-yum install git
-su
+apt-get install git <- instalacja gita debian
+yum install git <- instalacja gita centos 
+su <- root
 ping
 iptables -F
-git copy https://github.com/jkanclerz/http-chat
+git copy https://github.com/jkanclerz/http-chat <- clone z gita, potem: cd http-chat -> cd server -> python httpchat.py
+```
+pobranie wiadomości:
+```
+curl -X POST -d '{"text": "Hello World"}' http://{ip_address}:8888
+```
+odebranie:
+```
+curl -X POST -d '{"last_message_id":-1}' http://{ip_address}:8888/messages | python -m json.tool
 ```
