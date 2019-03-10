@@ -13,11 +13,11 @@ Wejściowe parametry sieci
 | ------------- |:-------------:| -----:|
 |   PC 1 | Debian 
 | IP - address  | 10.0.2.15| |
-| MASKA  | | |
+| MASKA  |24 | |
 |   |  | |
 | PC 2  | Centos 7| |
 | IP - address  |10.0.2.4 | |
-| MASKA  | | |
+| MASKA  |24 | |
 
 Weryfikacja połączenia
 ```
