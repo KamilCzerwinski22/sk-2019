@@ -37,7 +37,7 @@ Efekt
 ```
 ```
 64 bytes from 10.0.2.15: icmp_seq=1 ttl=64 time=0.284 ms
-64 bytes from 10.0.2.15: icmp_seq=2 ttl=64 time=0.376ms
+64 bytes from 10.0.2.15: icmp_seq=2 ttl=64 time=0.376 ms
 64 bytes from 10.0.2.15: icmp_seq=3 ttl=64 time=0.403 ms
 ```
 
@@ -95,9 +95,19 @@ Warto wiedzieć
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 | Lokalizacja pliku z konfiguracją sieci| | |
-| UP -> Wyłączenie interfejsu sieciowego| | |
-| DOWN -> Włączenie interfejsu sieciowego| | |
-| Sprawdzenie obecnych parametrów | | |
-| lista wszystkich interfejsów | | |
+| UP -> Wyłączenie interfejsu sieciowego| ifup| |
+| DOWN -> Włączenie interfejsu sieciowego| ifdown| |
+| Sprawdzenie obecnych parametrów | nmcli| |
+| lista wszystkich interfejsów | ip a | |
 | Które interfejsy jakie porty słuchają | | |
+
+notki:
+ip a
+nmcli
+ifup enp0s3
+apt-get install git
+yum install git
+su
+ping
+iptables -F
 
