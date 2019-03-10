@@ -100,7 +100,7 @@ Warto wiedzieć
 | Sprawdzenie obecnych parametrów | nmcli| |
 | lista wszystkich interfejsów | ip a | |
 | Które interfejsy jakie porty słuchają | | |
-
+```
 notki:
 ip a
 nmcli
@@ -110,4 +110,4 @@ yum install git
 su
 ping
 iptables -F
-
+```
