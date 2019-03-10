@@ -110,4 +110,5 @@ yum install git
 su
 ping
 iptables -F
+git copy https://github.com/jkanclerz/http-chat
 ```
