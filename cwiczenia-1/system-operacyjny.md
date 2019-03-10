@@ -33,6 +33,6 @@ aby załączyć obrazek
 ```markdown
 ![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 
-![alt schemat](./schemat.png)
+![alt schemat](images/schemat.png)
 
 
