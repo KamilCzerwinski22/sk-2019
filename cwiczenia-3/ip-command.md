@@ -42,9 +42,11 @@ Zadanie
 1.
    * Przygotuj konfigurację sieci zgodnie z powyższym diagramem, 
    * Przetestuj połączenie poleceniem ping
+   
 2.
    * Zainstaluj na komputerze ``PC1`` serwer programu ``HTTP CHAT`` dostępnego pod adresem ``https://github.com/jkanclerz/http-chat``
    * Przetestuj komunikację wysyłając wiadomość z komputera ``PC2``, upewnij się czy jest widoczna w konsoli serwera
+   
 3.
    * Dodaj do istniejącej sieci komputer ``PC3`` pod kontroloą systemu windows
    * Skonfiguruj ``PC3`` zgodnie z poniższym diagramem
