@@ -42,15 +42,20 @@ Zadanie
 1.
    * Przygotuj konfigurację sieci zgodnie z powyższym diagramem, 
    * Przetestuj połączenie poleceniem ping (ping z cmd windowsa na 172.16.100.6 i 172.16.100.7 działa, zrobione na 2 centosach, debian odmawiał posłuszeństwa)
-   
+![](1.jpg)
+![](4.jpg)
+![](5.png)
 2.
    * Zainstaluj na komputerze ``PC1`` serwer programu ``HTTP CHAT`` dostępnego pod adresem ``https://github.com/jkanclerz/http-chat``
    * Przetestuj komunikację wysyłając wiadomość z komputera ``PC2``, upewnij się czy jest widoczna w konsoli serwera
-   
+![](3.jpg)
 3.
    * Dodaj do istniejącej sieci komputer ``PC3`` pod kontroloą systemu windows
    * Skonfiguruj ``PC3`` zgodnie z poniższym diagramem
    * Zweryfkuj połączenie kożystając z przeglądarki, odwiedzając graficzny interfejs ``HTTP CHAT`` pod adresem ``http://172.16.100.10:8888`` > u mnie ``http://172.16.100.6:8888``
+   
+ 
    * Przygotuj dokumentację pisemno obrazkową z wykonania zadania w formacie ``markdown`` zamieść ją w serwisie ``github.com`` obok obocnego tematu ``cwiczenia-3``
+![](2.jpg)
 
 ![zadanie 3.1](cwiczenia3.1.svg) 
