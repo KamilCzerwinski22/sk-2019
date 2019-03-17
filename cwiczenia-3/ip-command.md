@@ -28,11 +28,11 @@ ip
 |   ``addr``    |                               | infirmacje o adresacji i własnościach interfejsów |
 |               |   ``ip addr``                 | informacja o wszystkich interfejsach              |
 |               |   ``ip addr show dev enp0s3`` | informacja o konkretnym interfejsie               |
-|   ``link``    |                               |  |
-|   ``route``   |  | |
-|   ``maddr``   |  | |
-|   ``neigh``   |  | |
-|   ``help``    |  | |
+|   ``link``    |   ``ip link set/show``  | Polecenie służy do zmiany ustawień istniejących interfejsów/wyświetlenie konfiguracji urządzen sieciowych |
+|   ``route``   |  ``ip route add/show`` | Zarządzanie tablicami routingu wewnątrz jądra. Można dodawac, modyfikowac, usuwac trasy etc.|
+|   ``maddr``   | ``ip maddr add/show/del``   |Służy do wyświetlania i zarządzania rozsyłaniem adresów / np. ``ip maddr show enp0s3`` pokaże info dla enp0s3|
+|   ``neigh``   |  ``ip neigh add/del/show/change`` | Polecenie sluży do zarządzania oraz wyświetlania tablicy sąsiedztwa|
+|   ``help``    |  ``ip help``| wyświetli dostepne informacje o poleceniu ip|
 
 Zadanie
 ------------
