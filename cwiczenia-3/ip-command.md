@@ -41,7 +41,7 @@ Zadanie
 
 1.
    * Przygotuj konfigurację sieci zgodnie z powyższym diagramem, 
-   * Przetestuj połączenie poleceniem ping
+   * Przetestuj połączenie poleceniem ping (ping z cmd windowsa na 172.16.100.6 i 172.16.100.7 działa, zrobione na 2 centosach, debian odmawiał posłuszeństwa)
    
 2.
    * Zainstaluj na komputerze ``PC1`` serwer programu ``HTTP CHAT`` dostępnego pod adresem ``https://github.com/jkanclerz/http-chat``
