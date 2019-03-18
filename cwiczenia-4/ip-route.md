@@ -16,6 +16,9 @@ ip
 |   ``route``    |                               | |
 |               |   ``ip route add``             | |
 
+przydatne:
+https://tlk.io/sk-2019 <- obraz pc
+root:123qwe
 
 Zadanie
 ------------
