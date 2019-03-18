@@ -15,9 +15,10 @@ ip
 | ------------- |:-------------| :---------------| 
 |   ``route``   |                                | |
 |               |   ``ip route show``            | pokaż tablice routingu |
-|               |   ``ip route add``             | |
-|               |   ``ip route add``             | |
-|               |   ``ip route add``             | |
+|               |   ``ip route add default via``     | dodanie wpisu trasy deafult|
+|               |   ``ip route get``             | pobranie trasy gdzie adres zostanie wyslany  |
+|               |   ``ip route add``             | dodanie do tablicy|
+|               |   ``ip route del``             | usunięcie z tablicy wpisu|
 
 przydatne:
 https://tlk.io/sk-2019 <- obraz pc
@@ -26,6 +27,10 @@ ip addr add 172.16.100.10/24 dev enp0s3
 ip addr add 10.0.10.10/24 dev enp0s3
 2 sieci lan, sieci nat, pc0 podlaczony do obu
 ip link set enp0s8 up
+ip route default via 10.0.10.1/172.16.100.1 <- do routera
+cat /proc/sys/net/ipv4/ip_forward
+cat /etc/sysctl.conf
+echo 1 > /proc/sys/net/ipv4/ip_forward
 
 Zadanie
 ------------
