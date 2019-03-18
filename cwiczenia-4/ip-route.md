@@ -13,12 +13,19 @@ ip
 -------------------------
 | subcommand    |  polecenie   | opis  |
 | ------------- |:-------------| :---------------| 
-|   ``route``    |                               | |
+|   ``route``   |                                | |
+|               |   ``ip route addshow``         | pokaż tablice routingu
+|               |   ``ip route add``             | |
+|               |   ``ip route add``             | |
 |               |   ``ip route add``             | |
 
 przydatne:
 https://tlk.io/sk-2019 <- obraz pc
 root:123qwe
+ip addr add 172.16.100.10/24 dev enp0s3
+ip addr add 10.0.10.10/24 dev enp0s3
+2 sieci lan, sieci nat, pc0 podlaczony do obu
+ip link set enp0s8 up
 
 Zadanie
 ------------
