@@ -14,7 +14,7 @@ ip
 | subcommand    |  polecenie   | opis  |
 | ------------- |:-------------| :---------------| 
 |   ``route``   |                                | |
-|               |   ``ip route addshow``         | pokaż tablice routingu
+|               |   ``ip route show``            | pokaż tablice routingu |
 |               |   ``ip route add``             | |
 |               |   ``ip route add``             | |
 |               |   ``ip route add``             | |
