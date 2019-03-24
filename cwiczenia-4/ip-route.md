@@ -20,7 +20,7 @@ ip
 |               |   ``ip route add``             | dodanie do tablicy|
 |               |   ``ip route del``             | usunięcie z tablicy wpisu|
 
-przydatne:
+``przydatne:
 https://tlk.io/sk-2019 <- obraz pc
 root:123qwe
 ip addr add 172.16.100.10/24 dev enp0s3
@@ -30,7 +30,7 @@ ip link set enp0s8 up
 ip route default via 10.0.10.1/172.16.100.1 <- do routera
 cat /proc/sys/net/ipv4/ip_forward
 cat /etc/sysctl.conf
-echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 1 > /proc/sys/net/ipv4/ip_forward``
 
 Zadanie
 ------------
