@@ -20,8 +20,8 @@ ip
 |               |   ``ip route add``             | dodanie do tablicy|
 |               |   ``ip route del``             | usunięcie z tablicy wpisu|
 
-``przydatne:
-https://tlk.io/sk-2019 <- obraz pc
+``przydatne:``
+``https://tlk.io/sk-2019 <- obraz pc
 root:123qwe
 ip addr add 172.16.100.10/24 dev enp0s3
 ip addr add 10.0.10.10/24 dev enp0s3
