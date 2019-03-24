@@ -63,3 +63,6 @@ Zadanie do domu
   * debian -> centos lub centos -> debian
   * zapewnij poprawną komunikację pomiędzy PC3 -> PC1
   
+  Konfiguracja obu systemów, router będzie znajdował się na centosie.
+  * Utworzenie 2 sieci nat, odpowiednio 
+  
