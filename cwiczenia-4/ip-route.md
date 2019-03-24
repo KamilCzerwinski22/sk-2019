@@ -71,9 +71,13 @@ Zadanie do domu
   * podłączenie lan1 i lan2 do routera
   * ``ip link set enp0s8 up`` <- podniesienie interfejsu enp0s8 na routerze
   * ``ip addr add 172.16.100.1/24 dev enp0s3`` oraz ``ip addr add 10.0.10.1/24 dev enp0s8`` <- router
+  ![](1.png)
   * ``cat /proc/sys/net/ipv4/ip_forward`` oraz ``echo 1 > /proc/sys/net/ipv4/ip_forward`` <- włączenie port forwaringu w kernelu
+  ![](2.png)
   * ``ping 172.16.100.10`` oraz ``ping 10.0.10.10`` z routera
+  ![](3.png)
   * ``ip route add default via 172.16.100.1`` oraz ``ip route add default via 10.0.10.1`` oraz wzajemne pingowanie się PC1 oraz PC2
+  ![](4.png)
   * pobranie na routerze httl-chat - > ``yum install git -> git clone https://github.com/jkanclerz/http-chat -> cd html-chat -> cd server -> python httpchat.py``
   Z jakiegoś powodu httpchat nie chciał współpracować, prawdopodobnie błedy w ustawieniach centosa
   
