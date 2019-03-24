@@ -21,7 +21,7 @@ ip
 |               |   ``ip route del``             | usunięcie z tablicy wpisu|
 
 ``przydatne:``
-``https://tlk.io/sk-2019 <- obraz pc
+https://tlk.io/sk-2019 <- obraz pc
 
 root:123qwe
 
