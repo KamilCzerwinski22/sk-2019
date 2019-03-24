@@ -64,5 +64,18 @@ Zadanie do domu
   * zapewnij poprawną komunikację pomiędzy PC3 -> PC1
   
   Konfiguracja obu systemów, router będzie znajdował się na centosie.
-  * Utworzenie 2 sieci nat, odpowiednio 
+  * Utworzenie 2 sieci nat, odpowiednio ``lan1  - 172.168.10.0/24`` oraz ``lan2 - 10.0.10.0/24``
+  * Przydzielenie do PC1 i PC2 sieci NAT
+  * ``ip addr add 172.16.100.10/24 dev enp0s3`` <- PC1
+  * ``ip addr add 10.0.10.10/24 dev enp0s3`` <- PC2
+  * podłączenie lan1 i lan2 do routera
+  * ``ip link set enp0s8 up`` <- podniesienie interfejsu enp0s8 na routerze
+  * ``ip addr add 172.16.100.1/24 dev enp0s3`` oraz ``ip addr add 10.0.10.1/24 dev enp0s8`` <- router
+  * ``cat /proc/sys/net/ipv4/ip_forward`` oraz ``echo 1 > /proc/sys/net/ipv4/ip_forward`` <- włączenie port forwaringu w kernelu
+  * ``ping 172.16.100.10`` oraz ``ping 10.0.10.10`` z routera
+  * ``ip route add default via 172.16.100.1`` oraz ``ip route add default via 10.0.10.1`` oraz wzajemne pingowanie się PC1 oraz PC2
+  * pobranie na routerze httl-chat - > ``yum install git -> git clone https://github.com/jkanclerz/http-chat -> cd html-chat -> cd server -> python httpchat.py``
+  Z jakiegoś powodu httpchat nie chciał współpracować, prawdopodobnie błedy w ustawieniach centosa
+  
+  
   
