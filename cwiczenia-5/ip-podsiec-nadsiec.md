@@ -35,6 +35,22 @@ routing
 | ``192.168.0.128/27`` | 192.168.0.129  | enp0s9      |
 | ``192.168.0.192/27`` | 192.168.0.193 | enp0s10      |
 
+nano /etc/network/interfaces
+auto enp0s3
+iface enp0s3 inet static
+  address 192.168.100.1
+  netmask 255.255.255.0
+
+auto en0s8
+  iface enp0s8 inet static
+  address 192.168.200.1
+  netmask 255.255.255.0
+  up ip route add 192.168.0.0/24 via 192.168.200.2
+  down ip route del 192.168.0.0/24
+  
+  ``do ćwiczen 2``
+  
+
 Zadanie
 ------------
 
