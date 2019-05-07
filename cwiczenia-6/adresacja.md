@@ -7,16 +7,22 @@ Struktura adresu IP
 Adres sieci
 -----------
 
-1. 
-2.
-3.
+1. Ip i maska sieci na BIN
+2. Operacja AND na obu
+3. Zamiana na DEC
 
 Adres rozgłoszeniowy
 -----------
 
-1. 
-2.
-3.
+1. Na masce sieci w BIN robimy operacje NOT
+2. Konwercja maski do DEC
+3. Dodanie do adresu sieci negacji maski w DEC
+
+lub
+
+1. Obliczenie adresu sieci
+2. Negacja maski sieci
+3. Binarna suma maski i adresu sieci
 
 
 Podział na równą ilość podsieci
@@ -35,27 +41,27 @@ Wprowadzenie
 ------------------------------
 | dziesiętnie |  binarnie   | 
 | --------- |:-------------| 
-| ``10``  |  | 
-| ``92``  | | 
-| ``37``  | | 
-| ``240`` | | 
-| ``192`` | | 
-| ``255`` | | 
-| ``128`` | | 
-| ``168`` | | 
+| ``10``  | 00001010 | 
+| ``92``  | 01011100 | 
+| ``37``  | 00100101 | 
+| ``240`` | 11110000 | 
+| ``192`` | 11000000 | 
+| ``255`` | 11111111 | 
+| ``128`` | 10000000 | 
+| ``168`` | 10101000 | 
 
 
 ------------------------------
 | binarnie |  dziesiętnie   | 
 | --------- |:-------------| 
-| ``00100000``  |  | 
-| ``11111000``  | | 
-| ``10100000``  | | 
-| ``00110000`` | | 
-| ``10101100`` | | 
-| ``01000000`` | | 
-| ``11111100`` | | 
-| ``01100010`` | | 
+| ``00100000``  | 32 | 
+| ``11111000``  | 248 | 
+| ``10100000``  | 160 | 
+| ``00110000`` | 48 | 
+| ``10101100`` | 172 | 
+| ``01000000`` | 64 | 
+| ``11111100`` | 252 | 
+| ``01100010`` | 98 | 
  
 Notacja CIDR
 ------------
