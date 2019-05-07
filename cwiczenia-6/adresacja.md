@@ -34,7 +34,8 @@ Chcemy 7 -> 2^3 >= 7
 
 Maska -> 255.255.255.11100000 -> 255.255.255.224 -> /27
 
-Liczba hostów - 2^(32-*maska*)-2
+Liczba hostów - 2^(32-maska)-2
+
 Wprowadzenie
 ------------
 
