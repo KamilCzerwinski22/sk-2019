@@ -14,5 +14,10 @@ Zadanie
    * Uruchom PC2 w z wykorzystaniem dystrybucji z interfejsem graficznym
    * Zainstaluj program wireshark dla ``PC2``
    * 
+   sudo add-apt-repository ppa:wireshark-dev/stable
+   
+   yes etc
+   
+   
    
       
