@@ -218,10 +218,10 @@ Zadanie
    ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
-| ``10.0.0.0/15``    | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
+| ``10.0.0.0/15`` | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
 
 
-    * B – 10 000 użytkowników,
+* B – 10 000 użytkowników,
     
     a więc 2^h-2 > 10k. H w tym przypadku będzie wynosiło 14, bo 2^14-2 = ‭16 382‬. 32-14 = 18, czyli maska dla sieci B będzie ``/18``.
     Adres sieci będzie kolejnym w kolejności adresem po broadcast'ie poprzedniej sieci, czyli skoro tam adres rozgłoszeniowy wynosił 10.1.255.255, adres sieci B będzie wynosił 10.2.0.0.
@@ -239,7 +239,7 @@ Zadanie
 | ``10.2.64.0/20``    | 10.2.64.1 - 10.2.79.254 (4 094 hostów) | 10.2.79.255 |
 
 
-    * D – 500 użytkowników,
+   * D – 500 użytkowników,
    a więc 2^h-2 > 500, czyli H wynosi 9, a maska ``/23``. Analogicznie:
    
    ----------------------------------------------------------
@@ -248,7 +248,7 @@ Zadanie
 | ``10.2.80.0/23``    | 10.2.80.1 - 10.2.81.254 (510 hostów) | 10.2.81.255 |
 
 
-    * E – 2 użytkowników,
+   * E – 2 użytkowników,
    a więc 2^h-2 > 2, czyli H wynosi 2, a maska sieci będzie wynosiła ``/30``. Analogicznie:
     
     ----------------------------------------------------------
