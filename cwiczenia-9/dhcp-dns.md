@@ -33,8 +33,32 @@ Zadanie
    * Przetestuj działanie aplikacji ``http-chat`` z ``PC2`` lub innym nowo podłączonym do sieci
    
 **Notki:**
-   ``*dla pc1 ustawić sieć nat, dla serwera ustawić sieć nat i zwykłe nat<br>
-     *apt-get install isc-dhcp-server - instalacja dhcp``
+   * dla pc ustawić sieć nat, dla serwera sieć nat + nat
+   * apt-get install isc-dhcp-server
+   * nano /etc/default/isc-dhcp-server
+   * interfacesv4 - nazwa karty co słucha
+   * nano /etc/dhcp/dhcpd.conf i na dole:
+     subnet 10.192.96.0 netmask 255.255.252.0 {
+     range 10.192.98.0 10.192.98.0;
+     option routers 10.192.96.1;
+     option domain-name-servers 10.192.96.1, 1.1.1.1;}
+   * systemctl start isc-dhcp-server - odpalenie serwera
+   * systemctl status isc-dhcp-server - sprawdzenie statusu
+   * dhclient -r enp0s3 - wyczyszczenie
+   * dhclient -v enp0s3 - przypisuje od nowa
+   * statyczne ip: 
+      nano /etc/dhcp/dhcpd.conf - i u dołu:
+      host httpchat {
+      hardware ethernet mac adress;
+      fixed-address 10.192.96.10;
+      }
+   * systemctl restart isc-dhcp-server - restart serwerka
+   
+**Notka do 7**:
+   * echo 1 > /proc/sys/net/ipv4/ip_forward
+   * iptables-t nat -A POSTROUTING -o enp0s3 -s 10.192.96.0/22 -j MASQUERADE - ustawienie żeby przesyłało internety
+   * /etc/hosts - ustawienie dns
+   * apt-get install dnsmasq
      
 
 Przydatne polecenia
