@@ -144,7 +144,7 @@ Zadanie
 1.
   * Podziel sieć ```192.168.1.0``` na 16 równych podsieci
   
-  2^4 >= 16    14*16+16(adres sieci)+16(adres rozgłoszeniowy) = 256
+  ``2^4 >= 16``    ``14*16+16(adres sieci)+16(adres rozgłoszeniowy) = 256``
   
 ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
@@ -170,8 +170,9 @@ Zadanie
 
 2. 
   * Podziel sieć ``/16`` na 6 równych podsieci.
+  ``2^3=8, tworzymy 8 podsieci ponieważ 6 nie jest potęgą 2. Utworzymy 6 sieci, 2 będą nieuzywane``
   
-  2^3=8, tworzymy 8 podsieci ponieważ 6 nie jest potęgą 2. Utworzymy 6 sieci, 2 będą nieuzywane
+
   ----------------------------------------------------------
 | Adres sieci | zakres hostów | Adres Rozgłoszeniowy |
 | --------- |:-------------| :---------------|
