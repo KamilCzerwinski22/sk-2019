@@ -252,11 +252,12 @@ Zadanie
 
    * E – 2 użytkowników,
    a więc 2^h-2 > 2, czyli H wynosi 2, a maska sieci będzie wynosiła ``/30``. Analogicznie:
-    ----------------------------------------------------------
+   
+   ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
-| ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | 10.2.82.3 |
-    
+| ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | ``10.2.82.3 |
+
 ``żeby sprawdzić kolejny adres sieci trzeba maske zamienić na binarny, i zależnie od oktetu i miejsca w którym znajduje się ostatnia jedynka dopasowywać. np jeśli przy ostatniej 1 w binarnym jest 16 i znajduje się ona w 3 oktecie, a nasz adres to 10.0.0.0, to adres kolejnej podsieci będzie 10.0.16.0``
 
 Podsumowując:
