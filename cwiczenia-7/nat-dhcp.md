@@ -43,3 +43,4 @@ Zadanie do domu
     * SWITCH
     * PC
   
+![zadanie domowe 7](diagram_net.svg)
