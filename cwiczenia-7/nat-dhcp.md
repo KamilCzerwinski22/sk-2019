@@ -30,7 +30,9 @@ Zadanie
     * Rozszerz architekturę o automatyczną konfigurację hostów w podsieciach ``192.168.64.192/27`` oraz ``172.16.95.216/29`` z wyykorzystaniem usługi ``DHCP``
     * Rozpocznij od zapoznania się z dokumentacją oraz instalacji programu ``isc-dhcp-server`` dla ``PC1``
 
- 
+
+*Notki:
+iptables -t nat -A POSTROUTING -s {ip sieci} -o enp0s3 -j MASQUERADE - komenda żeby przekazywać internet do kolejnych pctów
 
 Zadanie do domu
 ---------------
