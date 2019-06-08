@@ -230,7 +230,9 @@ Zadanie
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
 | ``10.2.0.0/18``    | 10.2.0.1 - 10.2.63.254 (16 382 hostów) | 10.2.63.255 | 
-    * C – 3 000 użytkowników,
+    
+    
+* C – 3 000 użytkowników,
     a więc 2^h-2 > 3k, czyli H wynosi 12, a maska sieci będzie wynosiła ``/20``. Analogicznie do poprzednich obliczam broadcast, zakres i adres sieci:
     
     ----------------------------------------------------------
