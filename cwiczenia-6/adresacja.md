@@ -212,13 +212,18 @@ Zadanie
 4. 
   * Podziel sieć ``10.0.0.0/8`` na 5 podsieci. 
     * ``Podsieć A ma posiadać 100 000 użytkowników,``
-    Chcemy mieć w sieci A 100k użytkowników, a więc 2^h-2 >= 100k. H w tym wypadku będzie wynosiło 17, bo 2^17-2 = 131 070.
+    chcemy mieć w sieci A 100k użytkowników, a więc 2^h-2 >= 100k. H w tym wypadku będzie wynosiło 17, bo 2^17-2 = 131 070.
     32-17=15, czyli maska dla sieci A będzie ``/15``, a więc:
    ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
-| ``10.0.0.0/15``    | 10.0.0.1 - 192.168.1.14 (131 070 hostów) | 192.168.1.15 |
-    * B – 10 000 użytkowników
+| ``10.0.0.0/15``    | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
+    ``* B – 10 000 użytkowników``
+    ----------------------------------------------------------
+| Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
+| --------- |:-------------|  :---------------|
+| ``10.0.0.0/15``    | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
+    
     * C – 3 000 użytkowników
     * D – 500 użytkowników
     * E – 2 użytkowników.
