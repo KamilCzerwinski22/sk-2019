@@ -213,18 +213,39 @@ Zadanie
   * Podziel sieć ``10.0.0.0/8`` na 5 podsieci. 
     * ``Podsieć A ma posiadać 100 000 użytkowników,``
     chcemy mieć w sieci A 100k użytkowników, a więc 2^h-2 >= 100k. H w tym wypadku będzie wynosiło 17, bo 2^17-2 = 131 070.
-    32-17=15, czyli maska dla sieci A będzie ``/15``, a więc:
+    32-17 = 15, czyli maska dla sieci A będzie ``/15``, a więc:
    ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
 | ``10.0.0.0/15``    | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
-    ``* B – 10 000 użytkowników``
+    ``* B – 10 000 użytkowników,``
+    a więc 2^h-2 > 10k. H w tym przypadku będzie wynosiło 14, bo 2^14-2 = ‭16 382‬. 32-14 = 18, czyli maska dla sieci B będzie ``/18``.
+    Adres sieci będzie kolejnym w kolejności adresem po broadcast'ie poprzedniej sieci, czyli skoro tam adres rozgłoszeniowy wynosił 10.1.255.255, adres sieci B będzie wynosił 10.2.0.0.
+    
     ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
-| ``10.0.0.0/15``    | 10.0.0.1 - 10.1.255.254 (131 070 hostów) | 10.1.255.255 |
+| ``10.2.0.0/18``    | 10.2.0.1 - 10.2.63.254 (16 382 hostów) | 10.2.63.255 | 
+    ``* C – 3 000 użytkowników,``
+    a więc 2^h-2 > 3k, czyli H wynosi 12, a maska sieci będzie wynosiła ``/20``. Analogicznie do poprzednich obliczam broadcast, zakres i adres sieci:
     
-    * C – 3 000 użytkowników
-    * D – 500 użytkowników
-    * E – 2 użytkowników.
+    ----------------------------------------------------------
+| Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
+| --------- |:-------------|  :---------------|
+| ``10.2.64.0/20``    | 10.2.64.1 - 10.2.79.254 (4 094 hostów) | 10.2.79.255 |
+   `` * D – 500 użytkowników,``
+   a więc 2^h-2 > 500, czyli H wynosi 9, a maska ``/23``. Analogicznie:
+   
+   ----------------------------------------------------------
+| Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
+| --------- |:-------------|  :---------------|
+| ``10.2.80.0/23``    | 10.2.80.1 - 10.2.81.254 (510 hostów) | 10.2.81.255 |
+   `` * E – 2 użytkowników,``
+   a więc 2^h-2 > 2, czyli H wynosi 2, a maska sieci będzie wynosiła ``/30``. Analogicznie:
     
+    ----------------------------------------------------------
+| Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
+| --------- |:-------------|  :---------------|
+| ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | 10.2.82.3 |
+    
+``żeby sprawdzić kolejny adres sieci trzeba maske zamienić na binarny, i zależnie od oktetu i miejsca w którym znajduje się ostatnia jedynka dopasowywać. np jeśli przy ostatniej 1 w binarnym jest 16 i znajduje się ona w 3 oktecie, a nasz adres to 10.0.0.0, to adres kolejnej podsieci będzie 10.0.16.0
