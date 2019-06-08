@@ -144,8 +144,8 @@ Zadanie
 1.
   * Podziel sieć ```192.168.1.0``` na 16 równych podsieci
   
-  2^4 >= 16
-  14*16+16(adres sieci)+16(adres rozgłoszeniowy) = 256
+  2^4 >= 16    14*16+16(adres sieci)+16(adres rozgłoszeniowy) = 256
+  
 ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
@@ -185,8 +185,8 @@ Zadanie
 3. 
   * Podziel sieć ``192.168.1.0/24``, tak aby każda podsieć miała 11 użytkowników.
   
-  2^h-2 >= liczba uzytkowników, czyli w tym wypadku h=4 bo 2^4-2(16) >= 11. Nie da sie podzielić idealnie na 11 użytkowników, więc podzielimy na najbliższą większą liczbę czyli na podsieci zawierające po 14 użytkowników (16 - adres sieci - adres rozgłoszeniowy = 14)
-  Maska dla nowych podsieci będzie wynosiła 28 bo maska+h, czyli 24+4=28 
+  2^h-2 >= liczba uzytkowników, czyli w tym wypadku h=4 bo 2^4-2(16) >= 11. Nie da sie podzielić idealnie na 11 użytkowników, więc podzielimy na najbliższą większą liczbę czyli na podsieci zawierające po 14 użytkowników (16 - adres sieci - adres rozgłoszeniowy = 14).
+  Maska dla nowych podsieci będzie wynosiła 28 bo maska+h, czyli 24+4=28.
   Takich podsieci będzie można utworzyć maksymalinie 16, bo 2^h = 2^4 = 16
   
   ----------------------------------------------------------
@@ -211,6 +211,8 @@ Zadanie
 4. 
   * Podziel sieć ``10.0.0.0/8`` na 5 podsieci. 
     * Podsieć A ma posiadać 100 000 użytkowników,
+    
+   
     * B – 10 000 użytkowników
     * C – 3 000 użytkowników
     * D – 500 użytkowników
