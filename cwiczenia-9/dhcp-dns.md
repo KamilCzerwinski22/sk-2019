@@ -33,7 +33,6 @@ Zadanie
    * Przetestuj działanie aplikacji ``http-chat`` z ``PC2`` lub innym nowo podłączonym do sieci
    
       *Notki:
-      ``
        *dla pc ustawić sieć nat, dla serwera siec nat i zwykle nat
        *intalacja dhcp - apt-get install isc-dhcp-server
        *nano /etc/default/isc-dhcp-server
