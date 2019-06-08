@@ -259,3 +259,14 @@ Zadanie
 | ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | 10.2.82.3 |
     
 ``żeby sprawdzić kolejny adres sieci trzeba maske zamienić na binarny, i zależnie od oktetu i miejsca w którym znajduje się ostatnia jedynka dopasowywać. np jeśli przy ostatniej 1 w binarnym jest 16 i znajduje się ona w 3 oktecie, a nasz adres to 10.0.0.0, to adres kolejnej podsieci będzie 10.0.16.0``
+
+*Podsumowując:
+----------------------------------------------------------
+| Sieć | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
+| --------- |:--------- |:-------------|  :---------------|
+|``A`` | ``10.0.0.0/15`` | ``10.0.0.1 - 10.1.255.254 (131 070 hostów)`` | ``10.1.255.255`` |
+|``B`` | ``10.2.0.0/18``    | ``10.2.0.1 - 10.2.63.254 (16 382 hostów)`` | ``10.2.63.255`` |
+|``C`` | ``10.2.64.0/20``    | ``10.2.64.1 - 10.2.79.254 (4 094 hostów)`` | ``10.2.79.255`` |
+|``D`` | ``10.2.80.0/23``    | ``10.2.80.1 - 10.2.81.254 (510 hostów)``| ``10.2.81.255`` |
+|``E`` | ``10.2.82.0/30``    | ``10.2.82.1 - 10.2.82.2 (2 hostów)`` | ``10.2.82.3`` |
+
