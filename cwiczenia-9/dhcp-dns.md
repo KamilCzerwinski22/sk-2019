@@ -31,6 +31,17 @@ Zadanie
    przy komunikacji z adresem ``chat.mydomain.local`` został rozwinięty na adres komputera ``PC1``
    * Uruchom usługę ``http-chat`` na komputerze ``PC1``
    * Przetestuj działanie aplikacji ``http-chat`` z ``PC2`` lub innym nowo podłączonym do sieci
+   
+      *Notki:
+      ``dla pc ustawić sieć nat, dla serwera siec nat i zwykle nat
+       intalacja dhcp - apt-get install isc-dhcp-server
+       nano /etc/default/isc-dhcp-server
+       interfacesv4 - nazwa słuchajcej karty
+       nano /etc/dhcp/dhcpd.conf i na dole
+       subnet 10.192.96.0 netmask 255.255.252.0 {
+       range 10.192.98.0 10.192.98.0;
+       option routers 10.192.96.1;
+       option domain-name-servers 10.192.96.1, 1.1.1.1;}``
  
    
 
