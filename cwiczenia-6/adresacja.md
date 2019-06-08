@@ -256,9 +256,9 @@ Zadanie
    ----------------------------------------------------------
 | Adres sieci |  zakres hostów   | Adres Rozgłoszeniowy |
 | --------- |:-------------|  :---------------|
-| ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | ``10.2.82.3 |
+| ``10.2.82.0/30``    | 10.2.82.1 - 10.2.82.2 (2 hostów) | 10.2.82.3 |
 
-``żeby sprawdzić kolejny adres sieci trzeba maske zamienić na binarny, i zależnie od oktetu i miejsca w którym znajduje się ostatnia jedynka dopasowywać. np jeśli przy ostatniej 1 w binarnym jest 16 i znajduje się ona w 3 oktecie, a nasz adres to 10.0.0.0, to adres kolejnej podsieci będzie 10.0.16.0``
+
 
 Podsumowując:
 ----------------------------------------------------------
@@ -269,4 +269,6 @@ Podsumowując:
 |``C`` | ``10.2.64.0/20``    | ``10.2.64.1 - 10.2.79.254 (4 094 hostów)`` | ``10.2.79.255`` |
 |``D`` | ``10.2.80.0/23``    | ``10.2.80.1 - 10.2.81.254 (510 hostów)``| ``10.2.81.255`` |
 |``E`` | ``10.2.82.0/30``    | ``10.2.82.1 - 10.2.82.2 (2 hostów)`` | ``10.2.82.3`` |
+
+``NOTKA: żeby sprawdzić kolejny adres sieci trzeba maske zamienić na binarny, i zależnie od oktetu i miejsca w którym znajduje się ostatnia jedynka dopasowywać. np jeśli przy ostatniej 1 w binarnym jest 16 i znajduje się ona w 3 oktecie, a nasz adres to 10.0.0.0, to adres kolejnej podsieci będzie 10.0.16.0``
 
