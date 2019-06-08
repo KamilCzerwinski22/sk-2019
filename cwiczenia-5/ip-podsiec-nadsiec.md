@@ -74,3 +74,5 @@ Zadanie do domu
     * PC
   * Uzupełnij diagram o adresację sieci oraz poszczególnych urządzeń
   
+![zadanie do domu 5](diagram_network.svg)
+  
