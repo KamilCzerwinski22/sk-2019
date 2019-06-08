@@ -24,20 +24,20 @@
 
 | łańcuch    |  przeznaczenie   | 
 | ------------- |:-------------| 
-|   ``INPUT``    |                               |
-|   ``OUTPUT``    |                              |
-|   ``FORWARD``    |                             |
-|   ``PREROUTING``    |                          |
-|   ``POSTROUTING``    |                         |
+|   ``INPUT``    | kontrola nad połączeniami przychodzącymi |
+|   ``OUTPUT``    | kontrola połączen wyjścia |
+|   ``FORWARD``    | do połączeń przychodzących które nie sa lokalne|
+|   ``PREROUTING``    | zmiana miejsca gdzie dostarczane są pakiety przed wysyłaniem |
+|   ``POSTROUTING``     | zmiana miejsca dostarczania pakietów po wysłaniu |
 
 ### co zrobić / target (-j)
 
 |     |  przeznaczenie   | 
 | ------------- |:-------------| 
-|   ``ACCEPT``    |                               |
-|   ``DROP``    |                              |
-|   ``REJECT``    |                             |
-|   ``LOG``    |                             |
+|   ``ACCEPT``    | akceptacja połączenia |
+|   ``DROP``    | zerwanie połączenia |
+|   ``REJECT``    | odrzucenie połączenia - odsyła wtedy błąd |
+|   ``LOG``    | informacje o pakietach |
 
 
 ### Użycie
@@ -45,6 +45,8 @@
 ```bash
 iptables -A -i <interface> -p <protocol (tcp/udp) -s <source> --dport <port> -j <target>
 ```
+``iptables-save > /etc/iptables.rules - zapisanie opcji do pliku``
+``
 
 ### wykorzystanie
 
