@@ -26,6 +26,7 @@ Zadanie 1 Rozwiązanie
 ### B. Dodanie reguły MASQUERADE i włączenie przekierowywania pakietów dla PC0
 #### Przekierowanie pakietów
 ``echo 1 > /proc/sys/net/ipv4/ip_forward``
+
 ``Jeśli chcemy żeby po resecie maszyny ip_forward został wchodzimy w nano /etc/sysctl.conf i kasujemy znak komentarza przy net.ipv4.ip_forward=1``
 ![komentarz](kom.png)
 #### Dodanie reguły MASQUERADE dla LAN1
@@ -33,6 +34,7 @@ Zadanie 1 Rozwiązanie
 #### Dodanie reguły MASQUERADE dla LAN2
 ``iptables -t nat -A POSTROUTING -s 172.22.128.0/19 -o enp0s3 -j MASQUERADE``
 
+Da się to także zapisać aby po resecie zostało, https://wiki.debian.org/iptables
 
 ### C. Ustawienie routingu
 Znowu w pliku ``nano /etc/network/interfaces``
@@ -42,7 +44,8 @@ Znowu w pliku ``nano /etc/network/interfaces``
 ``up ip route add default via 172.22.128.1``
 
 ### D. Włączenie DNS PC1 i PC2
-``wchodzimy w nano /etc/resolv.conf
-nameserver 8.8.8.8``
-## 3 Diagram
+``wchodzimy w nano /etc/resolv.conf``
+
+``nameserver 8.8.8.8``
+## 3. Diagram
 ![Diagram](zadanie1_diagram.svg)
