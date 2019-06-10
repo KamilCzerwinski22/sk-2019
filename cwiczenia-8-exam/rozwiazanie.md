@@ -27,7 +27,7 @@ Zadanie 1 Rozwiązanie
 #### Przekierowanie pakietów
 ``echo 1 > /proc/sys/net/ipv4/ip_forward``
 
-``Jeśli chcemy żeby po resecie maszyny ip_forward został wchodzimy w nano /etc/sysctl.conf i kasujemy znak komentarza przy net.ipv4.ip_forward=1``
+``Jeśli chcemy żeby po resecie maszyny ip_forward został wchodzimy w nano /etc/sysctl.d/99-sysctl.conf i kasujemy znak komentarza przy net.ipv4.ip_forward=1``
 ![komentarz](kom.png)
 #### Dodanie reguły MASQUERADE dla LAN1
 ``iptables -t nat -A POSTROUTING -s 172.22.160.0/23 -o enp0s3 -j MASQUERADE``
