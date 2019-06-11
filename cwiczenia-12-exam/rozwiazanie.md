@@ -130,6 +130,12 @@
     iptables -t nat -A POSTROUTING -s 188.156.222.0/29 -o enp0s3 -j MASQUERADE
     
     iptables -t nat -A POSTROUTING -s 188.156.228.0/22 -o enp0s3 -j MASQUERADE
+  #### Operacje powtarzamy dla każdego:
+    iptables -t nat -A POSTROUTING -s 192.16.9.0/26 -o enp0s3 -j MASQUERADE
+    
+    iptables -t nat -A POSTROUTING -s 192.16.13.0/26 -o enp0s3 -j MASQUERADE etc..
+  
+  
     
   #### Żeby zapisać reguły używamy komendy ipatables-save > /etc/iptables.up.rules po czym w pliku /etc/network/interfaces dodajemy wpis post-up iptables-restore < /etc/iptables.up.rules
   ## 8.Diagram
