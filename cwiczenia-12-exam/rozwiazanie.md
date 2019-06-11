@@ -14,7 +14,7 @@
   
   Piętro 2 - 188.156.222.0/29
   
-  Wifi - 188.156.223.0/29
+  Wifi - 188.156.228.0/29
   
   ### Router 1
   Sala 009 - 192.16.9.0/26
@@ -52,7 +52,7 @@
   | ``enp0s8`` | ``188.156.220.1`` | ``/29``|````|
   | ``enp0s9`` | ``188.156.221.1`` | ``/29`` |````|
   | ``enp0s10`` | ``188.156.222.1`` | ``/29`` |````|
-  | ``enp0s11`` | ``188.156.223.1`` | ``/22`` |``188.156.223.2-188.156.227.254 (1 021)``|
+  | ``enp0s11`` | ``188.156.228.1`` | ``/22`` |``188.156.228.2-188.156.231.254 (1 021)``|
   ### Router 0
   | Karta | Adres | Maska | Hosty|
   | --------- |:-------------| :---------------|:-------|
@@ -86,7 +86,27 @@
   ##### Będziemy chcieli mieć to na stałe, a więc:
   ``Tak samo jak w zadaniu 8 wchodzimy w nano /etc/sysctl.d/99-sysctl.conf i usuwamy znak komentarza przy net.ipv4.ip_forward=1``
 
-  ## 5.Ustalenie routingu
+  
+  ## 5.DHCP
+  #### Instalujemy dhcp (użyłem już udostępnionego na moodlu pcta) i wchodzimy do /etc/default/isc-dhcp-server, gdzie usuwamy znak komentarza przy configu DHCPv4
+  ![komentarz](komentarz.png)
+  #### Następnia dla Routerów 0, 1, 2 ustawiamy INTERFACESv4:
+  ![routery_012_interfaces](interfaces_r012.png)
+  #### W przypadku Routera Głównego ustawiamy tylko enp0s11, ponieważ to na tej sieci będą przydzielane adresy z dhcp do wifi:
+  ![router_główny_interfaces](interfaces_rg.png)
+  
+  #### Następnie wchodzimy do /etc/dhcp/dhcpd.conf i dopisujemy konfiguracje sieci:
+  #### Router główny:
+  ![konfiguracja_routera_głównego](conf_rg.png)
+  ``Po konfiguracji dhcp restartujemy go używając komendy systemctl restart isc-dhcp-server, po czym możemy sprawdzić sobie jego status - systemctl status isc-dhcp-server``
+  
+  #### Routery 0, 1, 2:
+  ![konfiguracja_routera_0[(conf_r0.png)
+  #### I analogicznie do tego trzeba skonfigurować każdy router
+  
+    
+  
+  ## 6.Ustawienie routingu
   #### Tak jak w zadaniu 8 wpisujemy do /etc/network/interfaces routingi dla każdego routera:
   #### Router 0:
       up ip route add default via 188.156.220.1 
@@ -94,6 +114,22 @@
       up ip route add default via 192.16.13.1
       up ip route add default via 192.16.14.1
       up ip route add default via 192.16.15.1
-  ## 6.DHCP
-  ## 7.Diagram
+  #### Router 1 oraz 2 analogicznie do 0
+      up ip route add default via 188.156.221.1
+      up ip route add default via 192.16.115.1 etc..
+  #### Router Główny
+      up ip route add default via 188.156.228.1
+  
+  ## 7. Włączenie reguły MASQUERADE
+  ### Router Głowny:
+    iptables -t nat -A POSTROUTING -s 188.156.220.0/29 -o enp0s3 -j MASQUERADE
+    
+    iptables -t nat -A POSTROUTING -s 188.156.221.0/29 -o enp0s3 -j MASQUERADE
+    
+    iptables -t nat -A POSTROUTING -s 188.156.222.0/29 -o enp0s3 -j MASQUERADE
+    
+    iptables -t nat -A POSTROUTING -s 188.156.228.0/29 -o enp0s3 -j MASQUERADE
+    
+  #### Żeby zapisać reguły używamy komendy ipatables-save > /etc/iptables.up.rules po czym w pliku /etc/network/interfaces dodajemy wpis post-up iptables-restore < /etc/iptables.up.rules
+  ## 8.Diagram
   ![Diagram do zadania 12](zadanie12_diagram.svg)
