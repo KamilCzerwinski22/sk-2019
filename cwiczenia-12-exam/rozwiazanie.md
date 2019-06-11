@@ -121,7 +121,7 @@
   #### Router Główny
       up ip route add default via 188.156.228.1
   
-  ## 7. Włączenie reguły MASQUERADE
+  teo nie zadziałałączenie reguły MASQUERADE
   ### Router Głowny:
     iptables -t nat -A POSTROUTING -s 188.156.220.0/29 -o enp0s3 -j MASQUERADE
     
