@@ -14,7 +14,7 @@
   
   Piętro 2 - 188.156.222.0/29
   
-  Wifi - 188.156.228.0/29
+  Wifi - 188.156.228.0/22
   
   ### Router 1
   Sala 009 - 192.16.9.0/26
@@ -98,10 +98,11 @@
   #### Następnie wchodzimy do /etc/dhcp/dhcpd.conf i dopisujemy konfiguracje sieci:
   #### Router główny:
   ![konfiguracja_routera_głównego](conf_rg.png)
+  
   ``Po konfiguracji dhcp restartujemy go używając komendy systemctl restart isc-dhcp-server, po czym możemy sprawdzić sobie jego status - systemctl status isc-dhcp-server``
   
   #### Routery 0, 1, 2:
-  ![konfiguracja_routera_0[(conf_r0.png)
+  ![konfiguracja_routera_0](conf_r0.png)
   #### I analogicznie do tego trzeba skonfigurować każdy router
   
     
@@ -128,7 +129,7 @@
     
     iptables -t nat -A POSTROUTING -s 188.156.222.0/29 -o enp0s3 -j MASQUERADE
     
-    iptables -t nat -A POSTROUTING -s 188.156.228.0/29 -o enp0s3 -j MASQUERADE
+    iptables -t nat -A POSTROUTING -s 188.156.228.0/22 -o enp0s3 -j MASQUERADE
     
   #### Żeby zapisać reguły używamy komendy ipatables-save > /etc/iptables.up.rules po czym w pliku /etc/network/interfaces dodajemy wpis post-up iptables-restore < /etc/iptables.up.rules
   ## 8.Diagram
